@@ -2,11 +2,12 @@
 const { title = 'Personal Card Astro', description } = Astro.props;
 import Footer from "@/components/Footer";
 import '@/styles/Footer.css'
-
+import Analytics from '@vercel/analytics/astro'
 ---
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <Analitycs />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
