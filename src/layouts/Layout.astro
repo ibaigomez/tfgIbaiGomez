@@ -3,6 +3,7 @@ const { title = 'Personal Card Astro', description } = Astro.props;
 import Footer from "@/components/Footer";
 import '@/styles/Footer.css'
 import Analytics from '@vercel/analytics/astro'
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +29,7 @@ import Analytics from '@vercel/analytics/astro'
     <Footer /> <!-- Implantamos el Footer en el layout -->
   </div>
   <Analytics />
+  <SpeedInsights />
   </body>
 </html>
 
