@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    padding: 2rem;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* ⬅️ Exactamente 4 columnas */
+    gap: 2rem; /* Espacio entre las cards */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .product-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  
+  dialog {
+    border: none;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  #cart {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: #ff6f61;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+  

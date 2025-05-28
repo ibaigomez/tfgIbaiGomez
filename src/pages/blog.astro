@@ -1,0 +1,13 @@
+---
+import BlogBrowser from '../components/BlogBrowser.jsx';
+import { getBlogs } from '@/lib/crystallizeBlogs'; // asegúrate que la ruta sea la real
+import Navbar from '@/components/cabecera.jsx';
+import Xd from '../layouts/Layout.astro';
+
+const blogs = await getBlogs();
+---
+<Xd title="Blog">
+    <Navbar client:load/>
+<BlogBrowser client:load blogs={blogs} />
+
+</Xd>

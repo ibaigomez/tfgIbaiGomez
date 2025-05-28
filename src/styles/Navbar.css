@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.barra-navegacion {
+  position: relative;
+  z-index: 100;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(to right, #ff6a00, #ff9600);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-navegacion {
+  width: 100px;
+  height: 100px;
+  margin-left: 2rem;
+}
+
+.boton-hamburguesa {
+  display: none;
+  font-size: 2rem;
+  background: #222;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.enlaces-navegacion {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.enlaces-navegacion li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .logo-navegacion {
+    margin-left: 0;
+  }
+
+  .boton-hamburguesa {
+    display: block;
+  }
+
+  .enlaces-navegacion {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+  }
+
+  .enlaces-navegacion.abierto {
+    display: flex;
+  }
+
+  .enlaces-navegacion li a {
+    color: black;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+}

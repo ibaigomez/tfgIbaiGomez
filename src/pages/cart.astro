@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CartViewer from '../components/CartViewer.jsx';
+import Navbar from '@/components/cabecera.jsx';
+---
+
+<Layout title="Carrito"  description="Página carrito del sitio">
+    <Navbar client:load/>
+  <section class="container">
+    <h1>Tu carrito</h1>
+    <CartViewer client:only="react" />
+  </section>
+</Layout>

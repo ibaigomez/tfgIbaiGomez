@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+  font-family: 'Libre Baskerville', Georgia, serif;
+}
+
+.blog-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #f4f1ec;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.close-button {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10000;
+  color: #333;
+}
+
+.blog-full-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 2px solid #999;
+  margin-bottom: 2rem;
+}
+
+.blog-content {
+  max-width: 950px;
+  background: white;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  border: 1px solid #ddd;
+  column-count: 2;
+  column-gap: 3rem;
+  border-radius: 6px;
+}
+
+.blog-content h1 {
+  column-span: all;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.blog-date {
+  column-span: all;
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.blog-content p {
+  break-inside: avoid;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .blog-content {
+    column-count: 1;
+    padding: 2rem 1.5rem;
+  }
+
+  .blog-content h1,
+  .blog-date {
+    text-align: left;
+  }
+}
+.blog-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  color: #111;
+}

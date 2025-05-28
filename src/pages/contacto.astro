@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '@/components/cabecera';
+import '@/styles/grid.css';
+import '@/styles/contacto.css'
+
+---
+
+<Layout title="Contacto"  description="Página contacto del sitio">
+    <Navbar client:load/>
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Contáctanos</h1>
+      <p>¿Tienes dudas o comentarios? Completa el formulario o contáctanos por redes sociales.</p>
+    </div>
+  </section>
+
+  <section class="contact-section container">
+  <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+  <input type="hidden" name="access_key" value="d209b16b-3c41-4110-a68f-e414a0784224" />
+
+      <label>
+        Nombre completo
+        <input type="text" name="name" placeholder="Tu nombre" required />
+      </label>
+
+      <label>
+        Correo electrónico
+        <input type="email" name="email" placeholder="tucorreo@ejemplo.com" required />
+      </label>
+
+      <label>
+        Asunto
+        <input type="text" name="subject" placeholder="Asunto del mensaje" />
+      </label>
+
+     <label>
+  Mensaje
+<textarea name="message" placeholder="Escribe tu mensaje aquí" rows="4" required></textarea>
+</label>
+
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <div class="contact-info">
+      <h2>También puedes encontrarnos en:</h2>
+     <div class="social-icons">
+            <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+            <a href="https://x.com/home"><i class="bi bi-twitter"></i></a>
+          </div>
+    </div>
+  </section>
+
+  <section class="map">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.516500423019!2d-2.941988722643365!3d43.261554077671455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e502873b41fd5%3A0x1ab0ace3022b6ab9!2sSAN%20LUIS%20-%20Bachillerato%20y%20Formaci%C3%B3n%20Profesional!5e0!3m2!1ses!2ses!4v1748195398024!5m2!1ses!2ses"   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+</Layout>
+ 
+

@@ -1,0 +1,182 @@
+---
+import Navbar from '@/components/cabecera';
+import Xd from '../layouts/Layout.astro';
+---
+
+<Xd title="Inicio" description="Página principal del sitio">
+  <main>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <Navbar client:load />
+
+    <style>
+      body {
+        background-color: #111;
+        color: #eee;
+        margin: 0;
+        padding: 0;
+      }
+
+      .zona-inicio {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        padding: 2rem;
+      }
+
+      .caja-zapatilla {
+        position: relative;
+        height: 500px;
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+      }
+
+      .caja-zapatilla:hover {
+        transform: scale(1.01);
+      }
+
+      .fondo-imagen {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .fondo-imagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.7);
+      }
+
+      .capa-oscura {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+        z-index: 1;
+        transition: opacity 0.3s ease;
+      }
+
+      /* texto y boton que aparecen con el hover opacity 0 para estar invisibles*/
+      .texto-central {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: white;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s ease;
+        font-family: 'Inter', sans-serif;
+        padding: 1rem;
+      }
+      /* mostrar lo de arriba al hacer el hover */
+      .caja-zapatilla:hover .texto-central {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .texto-central h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+      }
+
+      .texto-central p {
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .boton-ver-productos {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+      }
+
+      .boton-ver-productos:hover {
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .caja-zapatilla {
+          height: 400px;
+        }
+
+        .texto-central h1 {
+          font-size: 2rem;
+        }
+
+        .texto-central p {
+          font-size: 1rem;
+        }
+
+        .boton-ver-productos {
+          font-size: 0.9rem;
+          padding: 0.6rem 1.2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .caja-zapatilla {
+          height: 320px;
+        }
+
+        .texto-central h1 {
+          font-size: 1.5rem;
+        }
+
+        .texto-central p {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+
+    <div class="zona-inicio">
+      <div class="caja-zapatilla">
+        <div class="fondo-imagen">
+          <img loading="lazy" decoding="async" src="/images/jordan.webp" alt="Jordan" />
+          <div class="capa-oscura"></div>
+        </div>
+        <div class="texto-central">
+          <h1>Jordan</h1>
+          <p>Descubre las sneakers más icónicas</p>
+          <a href="/tienda?nombre=jordan" class="boton-ver-productos">Ver productos</a>
+        </div>
+      </div>
+
+      <div class="caja-zapatilla">
+        <div class="fondo-imagen">
+          <img loading="lazy" decoding="async" src="/images/af1.avif" alt="AF1" />
+          <div class="capa-oscura"></div>
+        </div>
+        <div class="texto-central">
+          <h1>AF1</h1>
+          <p>Diseño atemporal, estilo urbano puro</p>
+          <a href="/tienda?nombre=air force" class="boton-ver-productos">Explorar colección</a>
+        </div>
+      </div>
+
+      <div class="caja-zapatilla">
+        <div class="fondo-imagen">
+          <img loading="lazy" decoding="async" src="/images/samba.webp" alt="Samba" />
+          <div class="capa-oscura"></div>
+        </div>
+        <div class="texto-central">
+          <h1>Samba</h1>
+          <p>Las clásicas Adidas para cada ocasión</p>
+          <a href="/tienda?nombre=samba" class="boton-ver-productos">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Xd>

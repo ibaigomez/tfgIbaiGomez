@@ -1,0 +1,16 @@
+---
+import Navbar from '../components/cabecera.jsx';
+import Layout from '../layouts/Layout.astro';
+import Browser from '../components/tiendaBrowser.jsx';
+import { getSneakers } from '../lib/crystalize';
+
+const products = await getSneakers();
+---
+
+<Layout title="Tienda"  description="Tienda del sitio">
+     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@600&display=swap" rel="stylesheet">
+  <Navbar client:load />
+  <Browser client:load products={products} />
+</Layout>
+

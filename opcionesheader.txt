@@ -1,0 +1,26 @@
+opciones header
+.navbar.rebel {
+  background: linear-gradient(135deg, #ff3d00, #7b1fa2);
+  border-bottom: 2px solid #ff4081;
+  box-shadow: 0 4px 20px rgba(255, 64, 129, 0.3);
+}
+.navbar.rebel {
+  background: linear-gradient(135deg, #ff1744, #f50057);
+  border-bottom: 2px solid #ff4081;
+  box-shadow: 0 4px 16px rgba(245, 0, 87, 0.25);
+}
+.navbar.rebel {
+  background: linear-gradient(135deg, #ff3d00, #ff9100);
+  border-bottom: 2px solid #ff6d00;
+  box-shadow: 0 4px 20px rgba(255, 109, 0, 0.3);
+}
+background: linear-gradient(135deg, #6a1b9a, #d4fc79);
+border-bottom: 2px solid #a7ff83;
+background: linear-gradient(135deg, #ec407a, #7e57c2);
+border-bottom: 2px solid #f48fb1;
+background: linear-gradient(135deg, #ff6f00, #ffee58);
+border-bottom: 2px solid #ffc107;
+background: linear-gradient(135deg, #b2ff59, #00e676);
+border-bottom: 2px solid #00c853;
+background: linear-gradient(135deg, #0d47a1, #00e5ff);
+border-bottom: 2px solid #00bcd4;
