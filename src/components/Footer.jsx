@@ -12,9 +12,9 @@ export default function Footer() {
         <div className="columna-footer">
           <h3>Enlaces</h3>
           <ul>
-            <li><a href="/shop">Tienda</a></li>
-            <li><a href="/about">Quiénes somos</a></li>
-            <li><a href="/contact">Contacto</a></li>
+            <li><a href="/tienda">Tienda</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contacto">Contacto</a></li>
           </ul>
         </div>
         <div className="columna-footer">
